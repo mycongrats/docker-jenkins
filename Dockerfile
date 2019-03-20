@@ -6,6 +6,7 @@ RUN cd ~ \
     && curl -O -L "http://mirrors.jenkins.io/war-stable/latest/jenkins.war" \
     && curl -O -H "Cookie: oraclelicense=accept-securebackup-cookie" -H "Connection: keep-alive" -L "https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jre-8u201-linux-x64.rpm" \
     && yum install ./jre-8u201-linux-x64.rpm -y \
-    && yum clean all
+    && yum clean all \
+    && rm -rf ./jre-8u201-linux-x64.rpm
 
 CMD ["java -jar jenkins.war"]
