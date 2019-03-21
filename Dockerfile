@@ -10,4 +10,4 @@ RUN cd ~ \
     && yum clean all \
     && rm -rf ./jre-8u201-linux-x64.rpm
 
-CMD ["java -jar /root/jenkins.war"]
+CMD ["java", "-jar /root/jenkins.war"]
